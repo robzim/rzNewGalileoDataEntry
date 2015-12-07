@@ -17,11 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-Zb-DeH">
-                                <rect key="frame" x="534" y="20" width="36" height="39"/>
+                            <button opaque="NO" contentMode="center" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-Zb-DeH">
+                                <rect key="frame" x="262" y="20" width="308" height="36"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Exit"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Send and Exit"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="387" y="20" width="105" height="33"/>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="62" y="20" width="308" height="36"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="462" y="20" width="308" height="36"/>
+                                </variation>
                                 <connections>
                                     <action selector="myExit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8H-BG-ZYg"/>
                                 </connections>
@@ -35,6 +44,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="48" y="0.0" width="105" height="23"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Given that" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjh-VS-8Rb">
                                         <rect key="frame" x="235" y="30" width="71" height="18"/>
@@ -42,6 +54,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="65" y="30" width="71" height="18"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Love and Hate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrR-BX-BYf">
                                         <rect key="frame" x="221" y="55" width="99" height="18"/>
@@ -49,6 +64,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="51" y="55" width="99" height="18"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="are 100 Units apart," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAK-4G-V0J">
                                         <rect key="frame" x="203" y="80" width="135" height="18"/>
@@ -56,6 +74,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="33" y="80" width="135" height="18"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How Far Apart Are" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukm-dv-e9p">
                                         <rect key="frame" x="207" y="105" width="126" height="18"/>
@@ -63,6 +84,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="37" y="105" width="126" height="18"/>
+                                        </variation>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kuN-QH-FZK" userLabel="Comparison Concepts Horizontal View">
                                         <rect key="frame" x="176" y="130" width="188" height="18"/>
@@ -90,6 +114,9 @@
                                             </label>
                                         </subviews>
                                         <animations/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="6" y="130" width="188" height="18"/>
+                                        </variation>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHN-04-z3J">
                                         <rect key="frame" x="265" y="155" width="11" height="21"/>
@@ -97,6 +124,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="95" y="155" width="11" height="21"/>
+                                        </variation>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9vG-1W-PRJ" userLabel="Top Slider Stack View">
                                         <rect key="frame" x="0.0" y="183" width="540" height="30"/>
@@ -108,12 +138,18 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="Cot-ZB-53f"/>
                                                     <constraint firstAttribute="height" constant="30" id="rmS-T8-jMG"/>
                                                 </constraints>
+                                                <variation key="heightClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="-2" y="0.0" width="196" height="31"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="mySliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jhi-Zf-SCE"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
                                         <animations/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="4" y="183" width="192" height="30"/>
+                                        </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XjH-5o-z9Y" userLabel="0 to 10,000 Horizontal View">
                                         <rect key="frame" x="0.0" y="220" width="540" height="15"/>
@@ -131,9 +167,15 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="8" y="0.0" width="192" height="15"/>
+                                                </variation>
                                             </label>
                                         </subviews>
                                         <animations/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="220" width="200" height="15"/>
+                                        </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kza-5y-rdf" userLabel="Bottom Slider Stack View">
                                         <rect key="frame" x="0.0" y="242" width="540" height="30"/>
@@ -145,12 +187,18 @@
                                                     <constraint firstAttribute="height" constant="30" id="bH9-KQ-eRb"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="fLK-ni-VLj"/>
                                                 </constraints>
+                                                <variation key="heightClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="-2" y="0.0" width="196" height="31"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="myLittleSliderMove:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nyo-Jz-ejc"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
                                         <animations/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="4" y="242" width="192" height="30"/>
+                                        </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qCC-e6-y8V" userLabel="0 to 100 Horizontal View">
                                         <rect key="frame" x="0.0" y="279" width="540" height="15"/>
@@ -161,6 +209,18 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="171" height="15"/>
+                                                </variation>
+                                                <variation key="widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="15"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="15"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="15"/>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVS-HI-8wi">
                                                 <rect key="frame" x="519" y="0.0" width="21" height="15"/>
@@ -168,15 +228,33 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="171" y="0.0" width="21" height="15"/>
+                                                </variation>
+                                                <variation key="widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="163" y="0.0" width="21" height="15"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="163" y="0.0" width="21" height="15"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="163" y="0.0" width="21" height="15"/>
+                                                </variation>
                                             </label>
                                         </subviews>
                                         <animations/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="4" y="279" width="192" height="15"/>
+                                        </variation>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqU-RI-5LO">
                                         <rect key="frame" x="255" y="301" width="31" height="39"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="OK"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="85" y="301" width="31" height="39"/>
+                                        </variation>
                                         <connections>
                                             <action selector="myOK:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k3h-NJ-Il3"/>
                                         </connections>
@@ -194,6 +272,9 @@
                                     <mask key="constraints">
                                         <exclude reference="rRg-HG-J11"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="206" y="230" width="200" height="340"/>
                                 </variation>
                             </stackView>
                         </subviews>

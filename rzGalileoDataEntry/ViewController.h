@@ -12,7 +12,7 @@
 #import <MessageUI/MFMessageComposeViewController.h>
 
 
-@interface ViewController : UIViewController<MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate,UIAlertViewDelegate>
+@interface ViewController : UIViewController<MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate,UIAlertViewDelegate,UITextFieldDelegate>
 
 - (IBAction)mySliderMove:(UISlider *)sender;
 - (IBAction)myLittleSliderMove:(UISlider *)sender;

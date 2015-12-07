@@ -56,14 +56,14 @@ float myDistances[100][100];
     [myURLRequestController addAction:defaultAction];
     
     [myURLRequestController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-        textField.placeholder = myDefaultURLString;
+        textField.text = myDefaultURLString;
         textField.textColor = [UIColor blueColor];
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.borderStyle = UITextBorderStyleRoundedRect;
     }];
     
     [self presentViewController:myURLRequestController animated:YES completion:nil];
-
+    
 }
 
 
@@ -72,29 +72,32 @@ float myDistances[100][100];
 }
 
 
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    myDefaultURLString = textField.text;
+}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
-
-//    UIAlertView *myURLRequest = [[UIAlertView alloc] initWithTitle:@"Enter URL" message:@"Enter URL Here" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Galileo Viewer", @"URL Preview",nil];
-    
-    myDefaultURLString = @"http://www.acsu.buffalo.edu/~woelfel/DATA/data.crd.txt";
-    
-
     
     
-//    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
-//                                                                   message:@"This is an alert."
-//                                                            preferredStyle:UIAlertControllerStyleAlert];
-//    
-//    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-//                                                          handler:^(UIAlertAction * action) {}];
-//    
-//    [alert addAction:defaultAction];
-//    [self presentViewController:alert animated:YES completion:nil];
+    //    UIAlertView *myURLRequest = [[UIAlertView alloc] initWithTitle:@"Enter URL" message:@"Enter URL Here" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Galileo Viewer", @"URL Preview",nil];
+    
+//    myDefaultURLString = @"http://www.acsu.buffalo.edu/~woelfel/DATA/data.crd.txt";
+    
+    
+    
+    
+    //    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
+    //                                                                   message:@"This is an alert."
+    //                                                            preferredStyle:UIAlertControllerStyleAlert];
+    //
+    //    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+    //                                                          handler:^(UIAlertAction * action) {}];
+    //
+    //    [alert addAction:defaultAction];
+    //    [self presentViewController:alert animated:YES completion:nil];
     
     
     NSStringEncoding encoding;
@@ -110,6 +113,7 @@ float myDistances[100][100];
     //
     //
     //
+//    myStudyURL = [NSURL URLWithString:myDefaultURLString];
     myStudyURL = [NSURL URLWithString:myStudySite];
     //
     //
@@ -117,8 +121,8 @@ float myDistances[100][100];
     //  now we're going out to the web to get the data from the URL
     //
     NSString *myStudyString = [[NSString alloc] initWithContentsOfURL:myStudyURL
-                                                            usedEncoding:&encoding
-                                                                   error:&myError];
+                                                         usedEncoding:&encoding
+                                                                error:&myError];
     NSMutableArray *myTempArray = [NSMutableArray arrayWithObjects:[myStudyString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]], nil];
     //
     // rz first assign the email address to the first line in the file
@@ -142,10 +146,8 @@ float myDistances[100][100];
     }
     
     
-//    myRecipientsArray = [NSArray arrayWithObjects:@"zimmelman@gmail.com", nil];
-    
     //    myConceptsArray = [NSArray arrayWithObjects:@"Love", @"Hate", @"Happiness", @"Sadness", @"Indifference", @"Anger",   @"Yourself", nil];
-//        myConceptsArray = [NSArray arrayWithObjects:@"Love", @"Hate", @"Yourself", nil];
+    //        myConceptsArray = [NSArray arrayWithObjects:@"Love", @"Hate", @"Yourself", nil];
     myConceptCount = myConceptsArray.count - 1.0;
     
     for (int i = 0 ; i <= myConceptCount ; i++) {
@@ -175,6 +177,9 @@ float myDistances[100][100];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+
+
 
 - (void)showURLError{
     NSError *myError;
@@ -267,7 +272,7 @@ float myDistances[100][100];
 }
 
 - (IBAction)myExit:(id)sender {
-    UIAlertController *myAlert = [UIAlertController alertControllerWithTitle:@"EXIT ???" message:@"Wewill now send your data to the study leader via email.  Are you sure you are ready to Exit?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *myAlert = [UIAlertController alertControllerWithTitle:@"EXIT ???" message:@"You are about to send survey responses to the study leader via email.  Are you sure you are ready to Send Responses and Exit?" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
                                                               [self sendDatabyEmail];
@@ -286,7 +291,7 @@ float myDistances[100][100];
 //        [self presentViewController:myAlert animated:YES completion:nil];
 //        return;
 //    }
-//    
+//
 //    NSMutableString *myGalileoData = [[NSMutableString alloc] init];
 //    for (int x = 0 ; x < myConceptsArray.count ; x++)
 //        for (int y = 0; y < myConceptsArray.count; y++)
@@ -310,22 +315,26 @@ float myDistances[100][100];
 {
     switch (result) {
         case MessageComposeResultCancelled:
+        {
+            UIAlertController *mySentMessage = [UIAlertController alertControllerWithTitle:@"Cancelled" message:@"You have Cancelled the email send.  Your data was NOT sent.  Please consider re-taking the survey!" preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:mySentMessage animated:YES completion:nil];
             break;
-            
+        }
         case MessageComposeResultFailed:
         {
             UIAlertController *myAlert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Your device does not support SMS" preferredStyle:UIAlertControllerStyleAlert];
             [self presentViewController:myAlert animated:YES completion:nil];
             break;
         }
-            
         case MessageComposeResultSent:
+        {
+            UIAlertController *mySentMessage = [UIAlertController alertControllerWithTitle:@"Success" message:@"Your data was sent to the study leader.  Thank you for your participation!" preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:mySentMessage animated:YES completion:nil];
             break;
-            
+        }
         default:
             break;
     }
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
