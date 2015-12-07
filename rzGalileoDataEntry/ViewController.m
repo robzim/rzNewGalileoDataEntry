@@ -37,8 +37,15 @@ float myDistances[100][100];
 @synthesize myStudyName;
 @synthesize myStudyFile;
 @synthesize myStudyTitleLabel;
-@synthesize myDefaultURL;
+@synthesize myDefaultURLString;
+@synthesize myStudyURL;
 
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    
+    
+}
 
 
 -(void)getURL{
@@ -48,20 +55,33 @@ float myDistances[100][100];
                                                           handler:^(UIAlertAction * action) {}];
     [myURLRequestController addAction:defaultAction];
     
-    [myURLRequestController addAction:defaultAction];
+    [myURLRequestController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = myDefaultURLString;
+        textField.textColor = [UIColor blueColor];
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+    }];
+    
     [self presentViewController:myURLRequestController animated:YES completion:nil];
 
 }
+
+
+- (void)viewDidAppear:(BOOL)animated{
+    [self getURL];
+}
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
 
-    [self getURL];
 
 //    UIAlertView *myURLRequest = [[UIAlertView alloc] initWithTitle:@"Enter URL" message:@"Enter URL Here" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Galileo Viewer", @"URL Preview",nil];
     
-    myDefaultURL = @"http://www.acsu.buffalo.edu/~woelfel/DATA/data.crd.txt";
+    myDefaultURLString = @"http://www.acsu.buffalo.edu/~woelfel/DATA/data.crd.txt";
     
 
     
@@ -81,7 +101,21 @@ float myDistances[100][100];
     NSError *myError = nil;
     myStudyFile = @"rztest";
     NSString *myStudySite = [NSString stringWithFormat:@"http://robzimmelman.tripod.com/Galileo/%@.txt",myStudyFile];
-    NSURL  *myStudyURL = [NSURL URLWithString:myStudySite];
+    //
+    //
+    //  rz set myDefaultURLString and we can use it to read the study data
+    //
+    myDefaultURLString = [NSString stringWithFormat:@"http://robzimmelman.tripod.com/Galileo/%@.txt",myStudyFile];
+    
+    //
+    //
+    //
+    myStudyURL = [NSURL URLWithString:myStudySite];
+    //
+    //
+    //
+    //  now we're going out to the web to get the data from the URL
+    //
     NSString *myStudyString = [[NSString alloc] initWithContentsOfURL:myStudyURL
                                                             usedEncoding:&encoding
                                                                    error:&myError];

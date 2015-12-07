@@ -33,7 +33,9 @@
 @property (strong, nonatomic) NSArray *myRecipientsArray;
 @property (strong, nonatomic) NSString *myStudyFile;
 @property (strong, nonatomic) NSString *myStudyName;
-@property (strong, nonatomic) NSString *myDefaultURL;
+
+@property (strong,nonatomic)  NSURL  *myStudyURL;
+@property (strong, nonatomic) NSString *myDefaultURLString;
 
 @property (weak, nonatomic) IBOutlet UILabel *myStudyTitleLabel;
 
