@@ -42,9 +42,6 @@ float myDistances[100][100];
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    
-    
-    
 }
 
 
@@ -52,7 +49,9 @@ float myDistances[100][100];
     UIAlertController *myURLRequestController = [UIAlertController alertControllerWithTitle:@"Enter URL" message:@"Enter URL with Study Email, Title and Concepts" preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
+                                                          handler:^(UIAlertAction * action) {
+                                                              
+                                                          }];
     [myURLRequestController addAction:defaultAction];
     
     [myURLRequestController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
@@ -67,13 +66,19 @@ float myDistances[100][100];
 }
 
 
+
+- (void)viewWillLayoutSubviews{
+}
+
+
 - (void)viewDidAppear:(BOOL)animated{
-    [self getURL];
+//    [self getURL];
 }
 
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     myDefaultURLString = textField.text;
+    [self conductSurvey];
 }
 
 
@@ -81,27 +86,6 @@ float myDistances[100][100];
     [super viewDidLoad];
     
     
-    
-    //    UIAlertView *myURLRequest = [[UIAlertView alloc] initWithTitle:@"Enter URL" message:@"Enter URL Here" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Galileo Viewer", @"URL Preview",nil];
-    
-//    myDefaultURLString = @"http://www.acsu.buffalo.edu/~woelfel/DATA/data.crd.txt";
-    
-    
-    
-    
-    //    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
-    //                                                                   message:@"This is an alert."
-    //                                                            preferredStyle:UIAlertControllerStyleAlert];
-    //
-    //    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-    //                                                          handler:^(UIAlertAction * action) {}];
-    //
-    //    [alert addAction:defaultAction];
-    //    [self presentViewController:alert animated:YES completion:nil];
-    
-    
-    NSStringEncoding encoding;
-    NSError *myError = nil;
     myStudyFile = @"rztest";
     NSString *myStudySite = [NSString stringWithFormat:@"http://robzimmelman.tripod.com/Galileo/%@.txt",myStudyFile];
     //
@@ -118,8 +102,31 @@ float myDistances[100][100];
     //
     //
     //
+//    [self getURL];
+
+    
+    UISwipeGestureRecognizer *myRightSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(myRightSwipeAction)];
+    [myRightSwipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.view addGestureRecognizer:myRightSwipeGestureRecognizer];
+    
+    UISwipeGestureRecognizer *myLeftSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(myLeftSwipeAction)];
+    [myLeftSwipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:myLeftSwipeGestureRecognizer];
+    
+    [self conductSurvey];
+    
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+
+- (void)conductSurvey{
+    NSLog(@"In conduct survey");
     //  now we're going out to the web to get the data from the URL
     //
+    
+    NSStringEncoding encoding;
+    NSError *myError = nil;
+
     NSString *myStudyString = [[NSString alloc] initWithContentsOfURL:myStudyURL
                                                          usedEncoding:&encoding
                                                                 error:&myError];
@@ -163,23 +170,7 @@ float myDistances[100][100];
     self.myConcept1.text = [myConceptsArray objectAtIndex:concept1number];
     self.myConcept2.text = [NSString stringWithFormat:@"%@ ?",[myConceptsArray objectAtIndex:concept2number]];
     [myReferenceConcepts setText:[NSString stringWithFormat:@"%@ and %@",  [myConceptsArray objectAtIndex:0] , [myConceptsArray objectAtIndex:1]   ]];
-    
-    
-    
-    UISwipeGestureRecognizer *myRightSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(myRightSwipeAction)];
-    [myRightSwipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
-    [self.view addGestureRecognizer:myRightSwipeGestureRecognizer];
-    
-    UISwipeGestureRecognizer *myLeftSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(myLeftSwipeAction)];
-    [myLeftSwipeGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
-    [self.view addGestureRecognizer:myLeftSwipeGestureRecognizer];
-    
-    
-    // Do any additional setup after loading the view, typically from a nib.
 }
-
-
-
 
 - (void)showURLError{
     NSError *myError;
@@ -283,28 +274,6 @@ float myDistances[100][100];
 }
 
 
-//- (void)sendDatabySMS  {
-//    NSLog(@"at start of sendDatabySMS");
-//    if(![MFMessageComposeViewController canSendText]) {
-//        NSLog(@"CAN NOT SEND SMS");
-//        UIAlertController *myAlert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Your device does not support SMS" preferredStyle:UIAlertControllerStyleAlert];
-//        [self presentViewController:myAlert animated:YES completion:nil];
-//        return;
-//    }
-//
-//    NSMutableString *myGalileoData = [[NSMutableString alloc] init];
-//    for (int x = 0 ; x < myConceptsArray.count ; x++)
-//        for (int y = 0; y < myConceptsArray.count; y++)
-//            [myGalileoData appendString:[NSString stringWithFormat:@"%@,%@,%f;",myConceptsArray[x],myConceptsArray[y], myDistances[x][y]]];
-//    MFMessageComposeViewController *mySMSViewController = [[MFMessageComposeViewController alloc] init];
-//    [mySMSViewController setMessageComposeDelegate:self];
-//    [mySMSViewController setBody:myGalileoData];
-//    [mySMSViewController setSubject:@"Galileo Data from XXX Study"];
-//    [mySMSViewController setRecipients:myRecipientsArray];
-//    [self presentViewController:mySMSViewController animated:NO completion:nil];
-//    NSLog(@"at end of sendDatabySMS");
-//}
-
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -358,6 +327,29 @@ float myDistances[100][100];
     [self presentViewController:myMailViewController animated:NO completion:nil];
     NSLog(@"at end of sendDatabyEmail");
 }
+
+
+//- (void)sendDatabySMS  {
+//    NSLog(@"at start of sendDatabySMS");
+//    if(![MFMessageComposeViewController canSendText]) {
+//        NSLog(@"CAN NOT SEND SMS");
+//        UIAlertController *myAlert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Your device does not support SMS" preferredStyle:UIAlertControllerStyleAlert];
+//        [self presentViewController:myAlert animated:YES completion:nil];
+//        return;
+//    }
+//
+//    NSMutableString *myGalileoData = [[NSMutableString alloc] init];
+//    for (int x = 0 ; x < myConceptsArray.count ; x++)
+//        for (int y = 0; y < myConceptsArray.count; y++)
+//            [myGalileoData appendString:[NSString stringWithFormat:@"%@,%@,%f;",myConceptsArray[x],myConceptsArray[y], myDistances[x][y]]];
+//    MFMessageComposeViewController *mySMSViewController = [[MFMessageComposeViewController alloc] init];
+//    [mySMSViewController setMessageComposeDelegate:self];
+//    [mySMSViewController setBody:myGalileoData];
+//    [mySMSViewController setSubject:@"Galileo Data from XXX Study"];
+//    [mySMSViewController setRecipients:myRecipientsArray];
+//    [self presentViewController:mySMSViewController animated:NO completion:nil];
+//    NSLog(@"at end of sendDatabySMS");
+//}
 
 
 
