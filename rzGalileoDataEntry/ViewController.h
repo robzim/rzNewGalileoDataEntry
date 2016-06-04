@@ -43,5 +43,6 @@
 @property (strong, nonatomic) UIAlertController *myCancelledAlertController;
 @property (strong, nonatomic) UIAlertController *myFailedAlertController;
 @property (strong, nonatomic) UIAlertController *mySentMessageAlertController;
+@property (strong, nonatomic) NSString *myStartTimeStamp;
 @end
 

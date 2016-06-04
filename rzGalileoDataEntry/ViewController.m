@@ -16,6 +16,11 @@ int previousconcept1number = 0;
 int previousconcept2number = 0;
 
 
+int myQuestionCount = 0;
+int myRandomStartConcept = 0;
+int myNumberofQuestions = 5;
+
+
 int myConceptCount = 0;
 
 float myDisplayValue = 0;
@@ -45,6 +50,7 @@ float myDistances[100][100];
 @synthesize myCancelledAlertController;
 @synthesize myFailedAlertController;
 @synthesize mySentMessageAlertController;
+@synthesize myStartTimeStamp;
 
 
 
@@ -208,8 +214,8 @@ float myDistances[100][100];
         }
     }
     
-//    concept1number = arc4random() % myConceptCount;
-//    concept2number = concept1number + 1;
+    concept1number = arc4random() % myConceptCount;
+    concept2number = concept1number + 1;
 
     
     
@@ -334,9 +340,11 @@ float myDistances[100][100];
 - (IBAction)myOK:(id)sender {
     [self myEnterTheValue];
     //
+    // increment the counter so we can exit when we've entered enough
+    myQuestionCount++;
     // rz once concept1 is nconcepts -1 and concept2 is nconcepts, we're done
     //
-    if (concept1number == myConceptCount -1 && concept2number == myConceptCount){
+    if ((concept1number == myConceptCount -1 && concept2number == myConceptCount) || (myQuestionCount >= myNumberofQuestions)  )    {
         [self LogTheItemsintheArray];
         [self testPrint];
         [self sendDatabyEmail];
@@ -345,7 +353,7 @@ float myDistances[100][100];
     }
     [self myNextConcepts];
     //
-    //
+    // increment the concept count number
     //
     //  rz if the concepts are the same we don't need to get the values
     //
@@ -431,14 +439,14 @@ float myDistances[100][100];
 
 - (void)sendDatabyEmail {
     NSLog(@"at start of sendDatabyEmail");
-    
-    
     if (! [MFMailComposeViewController canSendMail] ) {
         NSLog(@"Cannot send email!!!");
         exit(1);
     } else {
         NSLog(@"CAN send email!!!");
         NSMutableString *myGalileoData = [[NSMutableString alloc] init];
+        NSDate *myTimeStamp = [NSDate date];
+        [myGalileoData appendString:[NSString stringWithFormat:@"Date/Time(GMT)=%@",myTimeStamp]];
         for (int x = 0 ; x < myConceptsArray.count ; x++)
             for (int y = 0; y < myConceptsArray.count; y++)
                 [myGalileoData appendString:[NSString stringWithFormat:@"%@,%@,%f;",myConceptsArray[x],myConceptsArray[y], myDistances[x][y]]];
@@ -448,6 +456,7 @@ float myDistances[100][100];
         [myMailViewController setSubject:[NSString stringWithFormat: @"Galileo Data from %@ Study",myStudyName]];
         [myMailViewController setToRecipients:myRecipientArray];
         [self presentViewController:myMailViewController animated:NO completion:nil];
+        NSLog(@"%@",myGalileoData);
         NSLog(@"at end of sendDatabyEmail");
     }
 }
