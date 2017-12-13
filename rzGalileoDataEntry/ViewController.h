@@ -17,16 +17,18 @@
 #import <netinet/in.h>
 
 
-@interface ViewController : UIViewController<MFMailComposeViewControllerDelegate>
+@interface ViewController : UIViewController<MFMailComposeViewControllerDelegate,UITextFieldDelegate>
 - (IBAction)mySliderMove:(UISlider *)sender;
 - (IBAction)myMiddleSliderMove:(UISlider *)sender;
 - (IBAction)myLittleSliderMove:(UISlider *)sender;
 - (IBAction)myOK:(id)sender;
 - (IBAction)myExit:(id)sender;
+@property (weak, nonatomic) IBOutlet UIStackView *myTopSliderStackView;
 
 @property SCNetworkReachabilityRef myReachableReference;
 @property SCNetworkReachabilityFlags *myNetworkReachabilityFlags;
 
+@property (weak, nonatomic) IBOutlet UIButton *mySpinnerButton;
 @property (weak, nonatomic) IBOutlet UILabel *myReferenceConcepts;
 @property (weak, nonatomic) IBOutlet UILabel *mySliderValue;
 @property (weak, nonatomic) IBOutlet UILabel *myConcept1;
@@ -38,11 +40,20 @@
 @property (strong, nonatomic) NSString *myStudyName;
 @property (strong, nonatomic) NSString *myStudySite;
 @property (strong,nonatomic)  NSURL  *myStudyURL;
+@property (weak, nonatomic) IBOutlet UILabel *myTapLabel;
 @property (strong, nonatomic) NSString *myDefaultURLString;
 @property (weak, nonatomic) IBOutlet UILabel *myStudyTitleLabel;
 @property (strong, nonatomic) UIAlertController *myCancelledAlertController;
 @property (strong, nonatomic) UIAlertController *myFailedAlertController;
 @property (strong, nonatomic) UIAlertController *mySentMessageAlertController;
 @property (strong, nonatomic) NSString *myStartTimeStamp;
+@property (strong, nonatomic) NSMutableString *myAnswersHoldingString;
+@property NSMutableDictionary *myAnswersDictionary;
+@property NSString *myAnswersJSONString;
+@property (weak, nonatomic) IBOutlet UITextField *myTextField;
+
+- (IBAction)myDisplayKeyboard:(id)sender;
+- (IBAction)myDisplayStepper:(id)sender;
+
 @end
 

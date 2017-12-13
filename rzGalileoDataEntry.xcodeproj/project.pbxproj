@@ -13,7 +13,8 @@
 		7C2737081C11D72600830476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2737061C11D72600830476 /* Main.storyboard */; };
 		7C27370A1C11D72600830476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2737091C11D72600830476 /* Assets.xcassets */; };
 		7C27370D1C11D72600830476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C27370B1C11D72600830476 /* LaunchScreen.storyboard */; };
-		7C394EA71C137FAD002B998B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6E59C81C1369740092A20E /* MessageUI.framework */; };
+		7C35E2CF1ED849C400AFAEFC /* myEntryPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C35E2CE1ED849C400AFAEFC /* myEntryPointViewController.m */; };
+		7CD2D5A31F28BE4E0007A747 /* rztest copy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7CD2D5A21F28BE4E0007A747 /* rztest copy.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,11 @@
 		7C2737091C11D72600830476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C27370C1C11D72600830476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C27370E1C11D72600830476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C35E2CD1ED849C400AFAEFC /* myEntryPointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myEntryPointViewController.h; sourceTree = "<group>"; };
+		7C35E2CE1ED849C400AFAEFC /* myEntryPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myEntryPointViewController.m; sourceTree = "<group>"; };
 		7C6E59C81C1369740092A20E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		7CCBEB5D1F2A392F004595C8 /* rztest.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = rztest.txt; sourceTree = "<group>"; };
+		7CD2D5A21F28BE4E0007A747 /* rztest copy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "rztest copy.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C394EA71C137FAD002B998B /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +74,11 @@
 				7C2737091C11D72600830476 /* Assets.xcassets */,
 				7C27370B1C11D72600830476 /* LaunchScreen.storyboard */,
 				7C27370E1C11D72600830476 /* Info.plist */,
+				7CCBEB5D1F2A392F004595C8 /* rztest.txt */,
+				7CD2D5A21F28BE4E0007A747 /* rztest copy.txt */,
 				7C2736FD1C11D72600830476 /* Supporting Files */,
+				7C35E2CD1ED849C400AFAEFC /* myEntryPointViewController.h */,
+				7C35E2CE1ED849C400AFAEFC /* myEntryPointViewController.m */,
 			);
 			path = rzGalileoDataEntry;
 			sourceTree = "<group>";
@@ -109,7 +117,7 @@
 		7C2736F21C11D72600830476 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Robert Zimmelman";
 				TargetAttributes = {
 					7C2736F91C11D72600830476 = {
@@ -141,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD2D5A31F28BE4E0007A747 /* rztest copy.txt in Resources */,
 				7C27370D1C11D72600830476 /* LaunchScreen.storyboard in Resources */,
 				7C27370A1C11D72600830476 /* Assets.xcassets in Resources */,
 				7C2737081C11D72600830476 /* Main.storyboard in Resources */,
@@ -154,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C35E2CF1ED849C400AFAEFC /* myEntryPointViewController.m in Sources */,
 				7C2737051C11D72600830476 /* ViewController.m in Sources */,
 				7C2737021C11D72600830476 /* AppDelegate.m in Sources */,
 				7C2736FF1C11D72600830476 /* main.m in Sources */,
@@ -190,13 +200,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -234,13 +252,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -269,7 +295,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8RV36K5JJ4;
 				INFOPLIST_FILE = rzGalileoDataEntry/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.zimmelman.MDSGalileoDataCapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,7 +309,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8RV36K5JJ4;
 				INFOPLIST_FILE = rzGalileoDataEntry/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.zimmelman.MDSGalileoDataCapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
