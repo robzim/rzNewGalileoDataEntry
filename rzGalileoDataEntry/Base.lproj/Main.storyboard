@@ -23,18 +23,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHU-m6-Vcw">
-                                <rect key="frame" x="442" y="1316" width="140" height="30"/>
+                                <rect key="frame" x="354.5" y="1291" width="315" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIp-5m-VxC">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Enter My Responses"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        </variation>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="presentation" identifier="myConductSurveySegue" id="1a4-bp-eex"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x8-6j-pOe">
-                                        <rect key="frame" x="-442" y="0.0" width="0.0" height="30"/>
+                                        <rect key="frame" x="-354.5" y="0.0" width="0.0" height="55"/>
                                         <state key="normal" title="Enter URL"/>
                                         <connections>
                                             <action selector="myShowTheURL:" destination="QAA-ID-IYc" eventType="touchUpInside" id="8LZ-Sg-izf"/>
@@ -43,11 +46,14 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="111" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumScaleFactor="0.050000000000000003" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kth-aJ-BYD">
-                                <rect key="frame" x="28.5" y="645.5" width="967" height="75.5"/>
+                                <rect key="frame" x="24.5" y="339.5" width="975.5" height="687.5"/>
                                 <string key="text">Enter your answers to the distance from each concept to each other concept.  When you are all done, press the "Send My Responses" button.  Your answers will be sent via email to the study leader.  Thanks for participating!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="AJD-MI-Hun">
                                 <rect key="frame" x="512" y="40" width="0.0" height="0.0"/>
@@ -71,10 +77,13 @@
                                 </subviews>
                             </stackView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL DONE!  THANKS!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXh-CA-3Kg">
-                                <rect key="frame" x="426.5" y="673" width="171" height="20.5"/>
+                                <rect key="frame" x="279" y="654.5" width="466.5" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

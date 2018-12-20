@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina3_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,27 +19,31 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="How Far Apart?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="P6T-Wm-8Pl">
-                                <rect key="frame" x="99" y="166.5" width="122" height="147"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="250" text="How Far Apart?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="P6T-Wm-8Pl">
+                                <rect key="frame" x="103" y="265" width="562" height="494"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="iPI-eb-hoc">
-                                <rect key="frame" x="10" y="28" width="300" height="102.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="iPI-eb-hoc">
+                                <rect key="frame" x="84" y="28" width="600" height="400"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="dU6-Vy-eBO"/>
+                                    <constraint firstAttribute="height" constant="400" id="CMe-Ac-mCy"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="dU6-Vy-eBO"/>
                                 </constraints>
                                 <string key="text">Answer the questions with your best estimate of how different, or "far apart" the pairs of conceps are from each other.  Similar things are close to each other.  Dissimilar things are far apart from each other.  Express these answers as distances.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="c 2017 Rob Zimmelman All Rights Reserved" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="jVR-Lc-Z9u">
-                                <rect key="frame" x="20" y="453" width="280" height="17"/>
+                                <rect key="frame" x="244" y="997" width="280" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -50,7 +54,6 @@
                             <constraint firstItem="P6T-Wm-8Pl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="BKQ-Ax-Ven"/>
                             <constraint firstItem="iPI-eb-hoc" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" symbolic="YES" id="CwY-Bq-6Xd"/>
                             <constraint firstItem="P6T-Wm-8Pl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="83" id="DPQ-TW-d1H"/>
-                            <constraint firstItem="P6T-Wm-8Pl" firstAttribute="top" secondItem="iPI-eb-hoc" secondAttribute="bottom" constant="36" id="Jvt-1J-Hc9"/>
                             <constraint firstItem="iPI-eb-hoc" firstAttribute="centerX" secondItem="P6T-Wm-8Pl" secondAttribute="centerX" id="VEl-Ld-nmt"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jVR-Lc-Z9u" secondAttribute="bottom" constant="10" id="aX0-Db-yFU"/>
                             <constraint firstItem="jVR-Lc-Z9u" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="e72-O8-U2w"/>
