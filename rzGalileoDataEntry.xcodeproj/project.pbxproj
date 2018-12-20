@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C2736FF1C11D72600830476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2736FE1C11D72600830476 /* main.m */; };
 		7C2737021C11D72600830476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2737011C11D72600830476 /* AppDelegate.m */; };
-		7C2737051C11D72600830476 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2737041C11D72600830476 /* ViewController.m */; };
+		7C2737051C11D72600830476 /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2737041C11D72600830476 /* myViewController.m */; };
 		7C2737081C11D72600830476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2737061C11D72600830476 /* Main.storyboard */; };
 		7C27370A1C11D72600830476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2737091C11D72600830476 /* Assets.xcassets */; };
 		7C27370D1C11D72600830476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C27370B1C11D72600830476 /* LaunchScreen.storyboard */; };
@@ -22,8 +22,8 @@
 		7C2736FE1C11D72600830476 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C2737001C11D72600830476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7C2737011C11D72600830476 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7C2737031C11D72600830476 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		7C2737041C11D72600830476 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7C2737031C11D72600830476 /* myViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = myViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7C2737041C11D72600830476 /* myViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = myViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7C2737071C11D72600830476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C2737091C11D72600830476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C27370C1C11D72600830476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 			children = (
 				7C2737001C11D72600830476 /* AppDelegate.h */,
 				7C2737011C11D72600830476 /* AppDelegate.m */,
-				7C2737031C11D72600830476 /* ViewController.h */,
-				7C2737041C11D72600830476 /* ViewController.m */,
+				7C2737031C11D72600830476 /* myViewController.h */,
+				7C2737041C11D72600830476 /* myViewController.m */,
 				7C2737061C11D72600830476 /* Main.storyboard */,
 				7C2737091C11D72600830476 /* Assets.xcassets */,
 				7C27370B1C11D72600830476 /* LaunchScreen.storyboard */,
@@ -164,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C35E2CF1ED849C400AFAEFC /* myEntryPointViewController.m in Sources */,
-				7C2737051C11D72600830476 /* ViewController.m in Sources */,
+				7C2737051C11D72600830476 /* myViewController.m in Sources */,
 				7C2737021C11D72600830476 /* AppDelegate.m in Sources */,
 				7C2736FF1C11D72600830476 /* main.m in Sources */,
 			);

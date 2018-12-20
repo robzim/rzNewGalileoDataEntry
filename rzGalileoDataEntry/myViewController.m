@@ -5,7 +5,7 @@
 //  Created by Robert Zimmelman on 12/4/15.
 //  Copyright © 2016 Robert Zimmelman. All rights reserved.
 //
-#import "ViewController.h"
+#import "myViewController.h"
 BOOL myUsesKeyboard;
 BOOL myUsesSpinner;
 BOOL myUsesSlider;
@@ -25,7 +25,8 @@ float myDisplayValue = 0;
 float myDistances[100][100];
 unsigned char *myDistanceTimes[100][100];
 
-@implementation ViewController
+@implementation myViewController
+@synthesize myStudyTagString;
 @synthesize myConceptsArray;
 @synthesize myRecipientArray;
 @synthesize myConcept1;
@@ -73,10 +74,14 @@ unsigned char *myDistanceTimes[100][100];
     //    [myAnswersHoldingString appendString:@"test"];
     //    NSLog(@"myAnswersHoldingString =  %@",myAnswersHoldingString);
     myAnswersDictionary = [[NSMutableDictionary alloc] initWithCapacity:100];
-    myStudyFile = @"rztest";
-    myDefaultURLString = [NSString stringWithFormat:@"http://robzimmelman.tripod.com/Galileo/%@.txt",myStudyFile];
+    if ( [myStudyTagString isEqualToString: @""] ) {
+        myStudyFile = @"rztest";
+        myDefaultURLString = [NSString stringWithFormat:@"http://robzimmelman.tripod.com/Galileo/%@.txt",myStudyFile];
+    } else {
+        myStudyFile = @"rztest";
+        myDefaultURLString = [NSString stringWithFormat:@"http://robzimmelman.tripod.com/Galileo/%@/%@.txt",myStudyTagString,myStudyFile];
+    }
     myReachableReference = SCNetworkReachabilityCreateWithName(NULL, [myDefaultURLString UTF8String]);
-    
     myStudySite = [NSString stringWithFormat:@"http://robzimmelman.tripod.com/Galileo/%@.txt",myStudyFile];
     NSLog(@"VIEW WILL APPEAR - reachability %@",myReachableReference);
     // rz check the url early and see if we can load it
@@ -105,8 +110,6 @@ unsigned char *myDistanceTimes[100][100];
 //        NSLog(@"myStudy = %@",myStudy);
         NSLog(@"GOOD STUDY.  myStudy HAS A VALUE");
     }
-  
-    
     
     //TODO: make sure the paired comparison shows when the keyboard pops
     [[NSNotificationCenter defaultCenter ] addObserverForName:UIKeyboardWillShowNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
@@ -137,7 +140,8 @@ unsigned char *myDistanceTimes[100][100];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    //    [super viewDidAppear:(BOOL)animated];
+        [super viewDidAppear:(BOOL)animated];
+    NSLog(@"study number %@",myStudyTagString);
     UITapGestureRecognizer *myTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(myHideTheKeyboard)];
     [self.view addGestureRecognizer:myTapGestureRecognizer];
     //

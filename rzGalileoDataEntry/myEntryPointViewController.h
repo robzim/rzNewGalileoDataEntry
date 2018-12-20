@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "myViewController.h"
 
-@interface myEntryPointViewController : UIViewController
+@interface myEntryPointViewController : UIViewController<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *myStudyTextField;
+
 @property (weak, nonatomic) IBOutlet UITextField *myURLTextField;
+@property NSString *myStudyTag;
 - (IBAction)myShowTheURL:(id)sender;
 - (IBAction)myGetTheURL:(id)sender;
 

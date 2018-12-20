@@ -13,7 +13,8 @@
 @end
 
 @implementation myEntryPointViewController
-
+@synthesize myStudyTag;
+@synthesize myStudyTextField;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -33,6 +34,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ( [[segue identifier] isEqualToString:@"myConductSurveySegue" ] ) {
+        myViewController *myVC = segue.destinationViewController;
+        [myVC setMyStudyTagString:myStudyTextField.text];
+    }
+}
 
 - (IBAction)myShowTheURL:(id)sender {
     [_myURLTextField setHidden:NO];

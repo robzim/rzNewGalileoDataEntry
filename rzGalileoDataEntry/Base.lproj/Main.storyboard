@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QAA-ID-IYc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QAA-ID-IYc">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHU-m6-Vcw">
-                                <rect key="frame" x="354.5" y="1291" width="315" height="55"/>
+                                <rect key="frame" x="30" y="1291" width="964" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIp-5m-VxC">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="55"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="964" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Enter My Responses"/>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -37,7 +36,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x8-6j-pOe">
-                                        <rect key="frame" x="-354.5" y="0.0" width="0.0" height="55"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="55"/>
                                         <state key="normal" title="Enter URL"/>
                                         <connections>
                                             <action selector="myShowTheURL:" destination="QAA-ID-IYc" eventType="touchUpInside" id="8LZ-Sg-izf"/>
@@ -55,11 +54,11 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                 </variation>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="AJD-MI-Hun">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="AJD-MI-Hun">
                                 <rect key="frame" x="512" y="40" width="0.0" height="0.0"/>
                                 <subviews>
                                     <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter the URL HERE" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qYa-hW-aCM">
-                                        <rect key="frame" x="-512" y="-40" width="0.0" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="HBz-aX-L7o"/>
                                         </constraints>
@@ -68,7 +67,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d9-pO-j7x">
-                                        <rect key="frame" x="-512" y="-40" width="0.0" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                         <state key="normal" title="OK"/>
                                         <connections>
                                             <action selector="myGetTheURL:" destination="QAA-ID-IYc" eventType="touchUpInside" id="BOi-vi-cKE"/>
@@ -85,6 +84,23 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 </variation>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zkf-dE-G6t">
+                                <rect key="frame" x="30" y="1211" width="964" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Tag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2W2-kv-QhN">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123456789" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U1p-WA-APf">
+                                        <rect key="frame" x="87" y="0.0" width="877" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -95,23 +111,30 @@
                             <constraint firstItem="kth-aJ-BYD" firstAttribute="centerX" secondItem="y0J-Q3-8cU" secondAttribute="centerX" id="NIm-bO-weR"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kth-aJ-BYD" secondAttribute="trailing" constant="20" id="Pek-ig-Qk3"/>
                             <constraint firstItem="AJD-MI-Hun" firstAttribute="centerX" secondItem="y0J-Q3-8cU" secondAttribute="centerX" id="UX7-PH-sLO"/>
+                            <constraint firstItem="HHU-m6-Vcw" firstAttribute="top" secondItem="Zkf-dE-G6t" secondAttribute="bottom" constant="50" id="VEd-J6-DtC"/>
+                            <constraint firstItem="Zkf-dE-G6t" firstAttribute="centerX" secondItem="y0J-Q3-8cU" secondAttribute="centerX" id="ZsA-1M-S6X"/>
                             <constraint firstItem="AJD-MI-Hun" firstAttribute="top" secondItem="xLB-V5-MjU" secondAttribute="bottom" constant="20" id="bCp-Yx-11B"/>
+                            <constraint firstItem="Zkf-dE-G6t" firstAttribute="leading" secondItem="y0J-Q3-8cU" secondAttribute="leadingMargin" constant="10" id="dIJ-8q-5bA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HHU-m6-Vcw" secondAttribute="trailing" constant="10" id="gw7-fC-dW6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zkf-dE-G6t" secondAttribute="trailing" constant="10" id="kPv-Xb-SoK"/>
                             <constraint firstItem="sXh-CA-3Kg" firstAttribute="centerX" secondItem="y0J-Q3-8cU" secondAttribute="centerX" id="lb0-Hx-0uV"/>
+                            <constraint firstItem="HHU-m6-Vcw" firstAttribute="leading" secondItem="y0J-Q3-8cU" secondAttribute="leadingMargin" constant="10" id="nmL-V6-W7o"/>
                             <constraint firstItem="AJD-MI-Hun" firstAttribute="centerX" secondItem="y0J-Q3-8cU" secondAttribute="centerX" id="xkm-9U-32O"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myStudyTextField" destination="U1p-WA-APf" id="vGe-1D-ics"/>
                         <outlet property="myURLTextField" destination="qYa-hW-aCM" id="hvv-Lz-GN4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3d3-SW-bz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-886.875" y="325"/>
+            <point key="canvasLocation" x="-887.10937499999989" y="324.59736456808196"/>
         </scene>
         <!--my Data Entry View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="my Data Entry View Controller" modalPresentationStyle="currentContext" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="my Data Entry View Controller" modalPresentationStyle="currentContext" id="BYZ-38-t0r" customClass="myViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -256,10 +279,10 @@
                                         </variation>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7S-U5-KtC" userLabel="Slider Value and OK Horizontal Stack">
-                                        <rect key="frame" x="340" y="446.5" width="284.5" height="30"/>
+                                        <rect key="frame" x="340" y="446.5" width="284" height="30"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tap for Keyboard" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fn-S8-hRC">
-                                                <rect key="frame" x="0.0" y="0.0" width="150.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="Hy2-9k-K1i"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="Jmt-gF-nTs"/>
@@ -273,7 +296,7 @@
                                                 </variation>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqU-RI-5LO">
-                                                <rect key="frame" x="150.5" y="0.0" width="134" height="30"/>
+                                                <rect key="frame" x="150" y="0.0" width="134" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" priority="10" constant="90" id="XIt-d2-OEc"/>
                                                 </constraints>
@@ -409,7 +432,7 @@
                                         <rect key="frame" x="482" y="892" width="0.0" height="0.0"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD2-Fu-VAz">
-                                                <rect key="frame" x="-512" y="-983" width="0.0" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                                 <state key="normal" title="Keyboard"/>
                                                 <connections>
                                                     <action selector="myDisplayKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kDx-ls-kpg"/>

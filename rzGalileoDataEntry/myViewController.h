@@ -17,7 +17,8 @@
 #import <netinet/in.h>
 
 
-@interface ViewController : UIViewController<MFMailComposeViewControllerDelegate,UITextFieldDelegate>
+@interface myViewController : UIViewController<MFMailComposeViewControllerDelegate,UITextFieldDelegate>
+@property NSString *myStudyTagString;
 - (IBAction)mySliderMove:(UISlider *)sender;
 - (IBAction)myMiddleSliderMove:(UISlider *)sender;
 - (IBAction)myLittleSliderMove:(UISlider *)sender;
