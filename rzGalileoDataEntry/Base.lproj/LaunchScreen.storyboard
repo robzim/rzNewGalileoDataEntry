@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina3_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,18 +16,67 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="250" text="How Far Apart?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="P6T-Wm-8Pl">
-                                <rect key="frame" x="80.5" y="30" width="159.5" height="29"/>
+                                <rect key="frame" x="116.66666666666667" y="69" width="159.66666666666663" height="28.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="iPI-eb-hoc">
-                                <rect key="frame" x="36" y="40" width="248" height="400"/>
-                                <string key="text">Answer the questions with your best estimate of how different, or "far apart" the pairs of concepts are from each other.  Similar concepts are close to each other.  Dissimilar concepts are far apart from each other.  Express these answers as distances.</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="6SP-fh-f1V">
+                                <rect key="frame" x="66" y="508" width="261" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="HUK-4y-tvY"/>
+                                </constraints>
+                                <string key="text">Format your Hosted Study Like This
+
+robzsurveys@gmail.com
+MKBKSH-3 Audience Field Survey
+COFFEE
+TEA
+OPEN DEFACATION
+REGULAR TOILET USE
+TOILET CLEANING
+PRIDE
+CONVENIENCE
+FAMILY HEALTH
+YOURSELF</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="250" text="Paired ComparisonData Entry" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fk1-Ev-UY7">
+                                <rect key="frame" x="113.33333333333333" y="105" width="166.33333333333337" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="Pqz-hu-1XQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="250" text="(email the results to yourself)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vvO-vF-bNp">
+                                <rect key="frame" x="117" y="122" width="166" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="HyZ-ky-GaM"/>
+                                    <constraint firstAttribute="width" constant="166" id="gwL-Sf-ec4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="c 2017 Rob Zimmelman All Rights Reserved" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="jVR-Lc-Z9u">
+                                <rect key="frame" x="56.666666666666657" y="791" width="280" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="iPI-eb-hoc">
+                                <rect key="frame" x="36" y="222" width="321" height="153"/>
+                                <string key="text">Answer the questions with your best estimate of how different, or "far apart" the pairs of concepts are from each other.  Similar concepts are close to each other.  Dissimilar concepts are far apart from each other.  Express these answers as distances.
+
+Need a hosted study?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -37,32 +84,34 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="c 2017 Rob Zimmelman All Rights Reserved" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="jVR-Lc-Z9u">
-                                <rect key="frame" x="20" y="460" width="280" height="10"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iPI-eb-hoc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="AVF-nk-mfN"/>
-                            <constraint firstItem="iPI-eb-hoc" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="20" id="EEo-Sz-kM8"/>
-                            <constraint firstItem="iPI-eb-hoc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="20" id="Tvy-3z-TmU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vvO-vF-bNp" secondAttribute="trailing" constant="94" id="18Q-jt-A6P"/>
+                            <constraint firstItem="jVR-Lc-Z9u" firstAttribute="top" secondItem="6SP-fh-f1V" secondAttribute="bottom" constant="36" id="1w5-l7-3T2"/>
+                            <constraint firstItem="6SP-fh-f1V" firstAttribute="centerX" secondItem="jVR-Lc-Z9u" secondAttribute="centerX" id="3B4-9s-MuU"/>
+                            <constraint firstItem="iPI-eb-hoc" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="163" id="EEo-Sz-kM8"/>
+                            <constraint firstItem="Fk1-Ev-UY7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="95" id="Pgx-GB-hAY"/>
+                            <constraint firstItem="iPI-eb-hoc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="20" id="Tvy-3z-TmU"/>
                             <constraint firstItem="iPI-eb-hoc" firstAttribute="centerX" secondItem="P6T-Wm-8Pl" secondAttribute="centerX" id="VEl-Ld-nmt"/>
-                            <constraint firstItem="iPI-eb-hoc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VTd-q1-sgJ"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jVR-Lc-Z9u" secondAttribute="bottom" constant="10" id="aX0-Db-yFU"/>
                             <constraint firstItem="jVR-Lc-Z9u" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="e72-O8-U2w"/>
+                            <constraint firstItem="vvO-vF-bNp" firstAttribute="top" secondItem="Fk1-Ev-UY7" secondAttribute="bottom" constant="2" id="eno-K4-W0h"/>
                             <constraint firstItem="iPI-eb-hoc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fXw-Sw-BBJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iPI-eb-hoc" secondAttribute="trailing" constant="20" id="gkm-KS-fOJ"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="iPI-eb-hoc" secondAttribute="trailing" constant="20" id="gkm-KS-fOJ"/>
+                            <constraint firstItem="6SP-fh-f1V" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="50" id="l5l-uz-YOj"/>
+                            <constraint firstItem="Fk1-Ev-UY7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nMl-oz-POd"/>
                             <constraint firstItem="P6T-Wm-8Pl" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="10" id="nb1-XM-lWA"/>
-                            <constraint firstItem="jVR-Lc-Z9u" firstAttribute="top" secondItem="iPI-eb-hoc" secondAttribute="bottom" constant="20" id="zuv-eI-5hu"/>
+                            <constraint firstItem="Fk1-Ev-UY7" firstAttribute="top" secondItem="P6T-Wm-8Pl" secondAttribute="bottom" constant="7.3333333333333286" id="pxu-zn-SRT"/>
+                            <constraint firstItem="vvO-vF-bNp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="xKT-bl-7x1"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Fk1-Ev-UY7" secondAttribute="trailing" constant="95" id="zm2-Te-knH"/>
+                            <constraint firstItem="jVR-Lc-Z9u" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iPI-eb-hoc" secondAttribute="bottom" constant="20" id="zuv-eI-5hu"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="348.57571214392806"/>
+            <point key="canvasLocation" x="58.778625954198468" y="347.88732394366201"/>
         </scene>
     </scenes>
 </document>

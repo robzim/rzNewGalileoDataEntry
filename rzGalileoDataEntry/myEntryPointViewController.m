@@ -18,6 +18,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [myStudyTextField setDelegate:self];
+}
+
+
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    [textField resignFirstResponder];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return TRUE;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +53,12 @@
     
     if ( [[segue identifier] isEqualToString:@"myConductSurveySegue" ] ) {
         myViewController *myVC = segue.destinationViewController;
-        [myVC setMyStudyTagString:myStudyTextField.text];
+        [myVC setMyStudyTagString:self.myStudyTextField.text];
+        // Delay for 5 seconds
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController pushViewController:myVC animated:YES];
+        });
+        
     }
 }
 

@@ -57,6 +57,10 @@ unsigned char *myDistanceTimes[100][100];
     [textField resignFirstResponder];
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return TRUE;
+}
 
 
 //-(void)textFieldDidBeginEditing:(UITextField *)textField{
@@ -141,6 +145,7 @@ unsigned char *myDistanceTimes[100][100];
 
 - (void)viewDidAppear:(BOOL)animated{
         [super viewDidAppear:(BOOL)animated];
+    [myTextField setDelegate:self];
     NSLog(@"study number %@",myStudyTagString);
     UITapGestureRecognizer *myTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(myHideTheKeyboard)];
     [self.view addGestureRecognizer:myTapGestureRecognizer];
@@ -212,6 +217,7 @@ unsigned char *myDistanceTimes[100][100];
     
     NSStringEncoding encoding;
     NSError *myError = nil;
+    
     
     NSString *myStudyString = [[NSString alloc] initWithContentsOfURL:myStudyURL
                                                          usedEncoding:&encoding
@@ -478,7 +484,7 @@ unsigned char *myDistanceTimes[100][100];
                                                                   }];
             [myCancelledAlertController addAction:defaultAction];
             UIAlertAction *myRetakeAction = [UIAlertAction actionWithTitle:@"Re Take The Study" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-                [myTextField setText:@"Tap for Keyboard"];
+                [self->myTextField setText:@"Tap for Keyboard"];
                 myQuestionCount = 0;
             }];
             [myCancelledAlertController addAction:myRetakeAction];
@@ -576,7 +582,7 @@ unsigned char *myDistanceTimes[100][100];
                                                           }];
     [myURLRequestController addAction:defaultAction];
     [myURLRequestController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-        textField.text = myDefaultURLString;
+        textField.text = self->myDefaultURLString;
         textField.textColor = [UIColor blueColor];
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.borderStyle = UITextBorderStyleRoundedRect;
@@ -635,11 +641,6 @@ unsigned char *myDistanceTimes[100][100];
     [self myHideAllSliders];
     [[NSNotificationCenter defaultCenter] postNotificationName:UIKeyboardDidShowNotification object:self];
 
-//    UIInputView *myInputView = [[UIInputView alloc] initWithFrame:CGRectMake(0.0, 0.0, 100.0, 100.0) inputViewStyle:UIInputViewStyleKeyboard];
-    //
-    //
-    //  how do we add the accessory view here?
-    //
     UIBarButtonItem *myOKItem = [[UIBarButtonItem alloc] initWithTitle:@"OK" style:UIBarButtonItemStyleDone target:self action:@selector(myHideTheKeyboard)];
     UIBarButtonItem *myCancelItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleDone target:self action:@selector(myHideTheKeyboard)];
     UIToolbar *myToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 50.0)];
@@ -650,16 +651,8 @@ unsigned char *myDistanceTimes[100][100];
     [myTextField setInputAccessoryView:myToolbar];
 
     
-    
-//    UIButton *myOKButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    [myOKButton setFrame:CGRectMake(1.0, 10.0, 50.0, 30.0)];
-//    [myOKButton setTitle:@"OK" forState:UIControlStateNormal];
-//    [myInputView addSubview:myOKButton];
-
-    
 
     [self.view addSubview:myToolbar];
-//    [myInputView setNeedsDisplay];
     
     
     
