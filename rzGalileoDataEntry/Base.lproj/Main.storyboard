@@ -32,7 +32,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="fbv-Vp-MY6">
-                                <rect key="frame" x="10" y="506" width="373.00000000000182" height="247"/>
+                                <rect key="frame" x="10" y="506" width="373" height="247"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="247" id="rpA-EC-9Yf"/>
                                 </constraints>
@@ -89,7 +89,7 @@ YOURSELF</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIp-5m-VxC">
-                                <rect key="frame" x="10" y="69" width="373.00000000000182" height="48"/>
+                                <rect key="frame" x="10" y="69" width="373" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Enter my Responses"/>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -183,7 +183,7 @@ YOURSELF</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-Zb-DeH">
-                                <rect key="frame" x="116" y="0.0" width="251" height="33"/>
+                                <rect key="frame" x="26" y="100" width="341" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Send My Responses"/>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -371,7 +371,9 @@ YOURSELF</string>
                                             </slider>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="8vv-D5-Jsi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="z8U-iT-WFw" secondAttribute="leading" id="4JT-b7-B0i"/>
                                             <constraint firstAttribute="height" constant="20" id="M6I-l7-blp"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8vv-D5-Jsi" secondAttribute="trailing" id="wvG-fM-RkT"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -412,6 +414,10 @@ YOURSELF</string>
                                                 </connections>
                                             </slider>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hMS-YP-zwP" secondAttribute="trailing" id="5aJ-tE-JYX"/>
+                                            <constraint firstItem="hMS-YP-zwP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9vG-1W-PRJ" secondAttribute="leading" id="nXf-ob-Ez0"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XjH-5o-z9Y" userLabel="0 to 1,000 Horizontal View">
                                         <rect key="frame" x="20" y="323" width="301" height="14.333333333333314"/>
@@ -446,6 +452,10 @@ YOURSELF</string>
                                                 </connections>
                                             </slider>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qDN-hW-gKA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kza-5y-rdf" secondAttribute="leading" id="PKr-PU-A2M"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qDN-hW-gKA" secondAttribute="trailing" id="TQP-Y1-4fd"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCC-e6-y8V" userLabel="0 to 100 Horizontal View">
                                         <rect key="frame" x="20" y="373.33333333333337" width="301" height="14.333333333333314"/>
@@ -516,10 +526,12 @@ YOURSELF</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="s5s-Zb-DeH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="08T-uR-hk5"/>
+                            <constraint firstItem="s5s-Zb-DeH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="08T-uR-hk5"/>
                             <constraint firstItem="lYH-2o-ePn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="2eW-zL-Zzh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s5s-Zb-DeH" secondAttribute="trailing" constant="10" id="9WR-DC-iFW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="s5s-Zb-DeH" secondAttribute="trailing" constant="10" id="Jlq-xe-tJ4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lYH-2o-ePn" secondAttribute="trailing" constant="10" id="K7U-rq-7qz"/>
+                            <constraint firstItem="s5s-Zb-DeH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="MOw-zE-cRf"/>
                             <constraint firstItem="lYH-2o-ePn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QoQ-QC-44F"/>
                             <constraint firstItem="s5s-Zb-DeH" firstAttribute="leading" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="c1Q-zM-ojG"/>
                         </constraints>
